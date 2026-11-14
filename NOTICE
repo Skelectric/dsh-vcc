@@ -1,0 +1,34 @@
+dsh-vcc NOTICE
+==============
+
+dsh-vcc is a port of pi-vcc to DeepSeek Harness. The compiler and recall core
+under src/core/ and src/extract/ is pi-vcc source, vendored verbatim except
+for the mechanical changes listed in PATCHES.md.
+
+Upstream
+--------
+pi-vcc 0.11.2
+https://github.com/sting8k/pi-vcc
+commit 2da84918b90100c4cda0a1d468e42375c7253d61 (2026-10-29)
+MIT License, Copyright (c) 2026 sting8k
+
+Upstream credits, preserved here because parts of the vendored core derive
+from them:
+
+- VCC (View-oriented Conversation Compiler) by lllyasviel
+  https://github.com/lllyasviel/VCC — the original transcript-preserving
+  conversation compiler that inspired pi-vcc.
+- pi-blackhole by k0valik
+  https://github.com/k0valik/pi-blackhole — recall `mode:"touched"`,
+  `#N:path` drill-down, and the session-global `#N` counting rule
+  (src/core/global-indices.ts, ported from pi-blackhole commit f82e07a).
+- monotykamary/pi-vcc (`tom` branch)
+  https://github.com/monotykamary/pi-vcc — the invisible auto-continue
+  pattern, which this port does not include (dsh owns run continuation).
+
+License
+-------
+MIT. The dsh integration layer (src/dsh/, src/index.ts) is original work
+distributed under the same MIT terms, Copyright (c) 2026 Skelectric. The
+vendored pi-vcc core remains under sting8k's MIT copyright. Both notices are
+reproduced in LICENSE.
