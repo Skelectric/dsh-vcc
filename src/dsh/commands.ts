@@ -4,7 +4,7 @@
 //                  the current session (no mutation, no compaction run).
 // /vcc-recall …  — the vcc_recall tool as a command (same algorithm).
 
-import { CommandDefinitionId } from '@deepseek-ai/dsh-commands/brand'
+import { CommandDefinitionId } from '@deepseek-ai/dsh-commands'
 import { parseCommandRequest } from '../core/recall-request.ts'
 import { runRecall } from '../core/recall-run.ts'
 import { openRecallView } from './recall-view.ts'
